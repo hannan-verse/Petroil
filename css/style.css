@@ -1,0 +1,110 @@
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.blog{
+    background: #F0F0F0;
+    padding-top: 110px;
+    padding-bottom: 162px;
+}
+.shape{
+    background: teal;
+    height: 401px;
+    width: 339px;
+    box-shadow: 0px 0px 120px -26px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 120px -26px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 120px -26px rgba(0,0,0,0.75);;
+    position: relative;
+    column-gap: 60px;
+    
+}
+
+.shape:hover .overlay{
+    bottom: 0%;
+    opacity: 1;
+    visibility: visible; 
+}
+.overlay{
+    background: linear-gradient(rgba(0, 0, 0,0.50),#666666);
+    height: 401px;
+    width: 339px;
+    position: absolute;
+    bottom: -100%;
+    left: 0px;
+    padding: 75px 44px 55px 46px;  
+    visibility: hidden; 
+    opacity: 0;
+    transition: 0.5s;
+}
+.overlay p{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #FFFFFF;
+    padding-bottom: 52px;
+}
+.overlay a{
+    background: rgba(255, 255, 255,0.5);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: #FFFFFF;
+    padding: 10px 22px;
+}
+.posi{
+    position: relative;
+    margin-top: 28px;
+}
+.more{
+   position: absolute;
+   top: 0;
+   right: 100px;
+    
+}
+.more a{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    position: relative;
+    cursor: pointer;
+}
+.more i{
+    position: absolute;
+    right: -20px;
+    top: 3px;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+.more a:hover i{
+    right: -27px;
+    opacity: 1;
+    visibility: visible;
+}
+/* =========================== */
+/* =========================== */
+.map{
+    width: 100%;
+    height: 450px;
+    background-image: url(../img/Maps.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* ========================= */
+/* ========================= */
+.red-line{
+    background: #F40404;
+    height: 145px;
+}
+.red-line h3{
+    font-size: 36px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+   
+}
+
