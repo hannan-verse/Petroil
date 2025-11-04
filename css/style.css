@@ -1,3 +1,5 @@
+/* ==========================================petroil project */
+/* ==========================================common css */
 ul,ol{
     list-style: none;
 }
@@ -8,6 +10,25 @@ a{
     background: #F0F0F0;
     padding-top: 110px;
     padding-bottom: 162px;
+}
+.row.no-gutter {
+   --bs-gutter-x: 0;         /*  =========removing gutter gap=========  */
+  --bs-gutter-y: 0;
+}
+/* ====================three boxes============== */
+.box{
+    width: 33%;
+    
+}
+.mid-box{
+    width: 34%;
+    padding-left: 52px;
+    
+}
+.last-box{
+    width: 33%;
+    padding-left: 88px;
+    
 }
 .shape{
     background: teal;
@@ -20,18 +41,52 @@ a{
     column-gap: 60px;
     
 }
+.shape-mid{
+    background: teal;
+    height: 401px;
+    width: 339px;
+    box-shadow: 0px 0px 120px -26px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 120px -26px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 120px -26px rgba(0,0,0,0.75);;
+    position: relative;
+    
+    
+}
+.shape-last{
+    background: teal;
+    height: 401px;
+    width: 339px;
+    box-shadow: 0px 0px 120px -26px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 120px -26px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 120px -26px rgba(0,0,0,0.75);;
+    position: relative;
+    
+    
+}
+/* ==================hover with these boxes */
 
 .shape:hover .overlay{
-    bottom: 0%;
+    top: 0%;
     opacity: 1;
     visibility: visible; 
 }
+.shape-mid:hover .overlay{
+    top: 0%;
+    opacity: 1;
+    visibility: visible; 
+}
+.shape-last:hover .overlay{
+    top: 0%;
+    opacity: 1;
+    visibility: visible; 
+}
+/* ==================hover with these boxes ended */
 .overlay{
     background: linear-gradient(rgba(0, 0, 0,0.50),#666666);
     height: 401px;
     width: 339px;
     position: absolute;
-    bottom: -100%;
+    top: -100%;
     left: 0px;
     padding: 75px 44px 55px 46px;  
     visibility: hidden; 
@@ -45,23 +100,59 @@ a{
     color: #FFFFFF;
     padding-bottom: 52px;
 }
-.overlay a{
-    background: rgba(255, 255, 255,0.5);
+/* ===== Read More Button Animated Effect ===== */
+.overlay a {
+    background: rgba(255, 255, 255, 0.5);
     font-size: 12px;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
     color: #FFFFFF;
     padding: 10px 22px;
-}
-.posi{
+    border-radius: 4px;
     position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+/* ========== Create a shining animation overlay===== === */
+.overlay a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.3) 100%);
+    transform: skewX(-25deg);
+}
+
+.overlay a:hover::before {
+    animation: shine 0.8s forwards;
+}
+
+.overlay a:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+    100% {
+        left: 125%;
+    }
+}
+
+/* ==================overlay ended which is used as hover */
+.posi{
+   position: relative;    /* ========lower title======  */
     margin-top: 28px;
 }
 .more{
-   position: absolute;
-   top: 0;
-   right: 100px;
-    
+  text-align: end  
 }
 .more a{
     font-size: 16px;
@@ -83,9 +174,9 @@ a{
     right: -27px;
     opacity: 1;
     visibility: visible;
-}
+}                                        /* ========lower title ended ======  */
 /* =========================== */
-/* =========================== */
+/* ===========map part================ */
 .map{
     width: 100%;
     height: 450px;
@@ -94,8 +185,8 @@ a{
     background-size: cover;
     background-repeat: no-repeat;
 }
-/* ========================= */
-/* ========================= */
+/* ==========map part ended=============== */
+/* =========red line ================ */
 .red-line{
     background: #F40404;
     height: 145px;
@@ -107,4 +198,150 @@ a{
     color: #ffffff;
    
 }
+.text-part{
+    display: flex;
+    padding-top: 46px;
+    padding-bottom: 45px;
+    
+}
+.text-part .contact-Btn{
+    background: transparent;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #FFFFFF;
+    padding: 16px 48px;
+    margin-left: 289px;
+    transition: .4s;
+}
+.text-part .contact-Btn:hover{
+    background: yellow;
+    color: black;
+    border-color: transparent;
+}
 
+
+/* =========red line ended ================ */
+
+/* ============================================= */
+/* ========== RESPONSIVE DESIGN START ========== */
+/* ============================================= */
+
+/* ========= Large Devices (max-width:1200px) ========= */
+@media (max-width:1200px){
+    .mid-box {
+        padding-left: 30px;
+    }
+    .last-box {
+        padding-left: 40px;
+    }
+    .text-part .contact-Btn {
+        margin-left: 180px;
+        padding: 14px 40px;
+    }
+}
+
+/* ========= Medium Devices (tablets, max-width:992px) ========= */
+@media (max-width:992px){
+    .blog {
+        padding-top: 80px;
+        padding-bottom: 120px;
+    }
+    .box, .mid-box, .last-box {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    .shape, .shape-mid, .shape-last {
+        width: 90%;
+        height: 380px;
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+    }
+    .text-part {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0;
+    }
+    .text-part h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .text-part .contact-Btn {
+        margin-left: 0;
+        align-self: center;
+    }
+}
+
+/* ========= Small Devices (phones, max-width:768px) ========= */
+@media (max-width:768px){
+    .blog {
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+    .shape, .shape-mid, .shape-last {
+        width: 100%;
+        height: auto;
+    }
+    .overlay {
+        padding: 50px 25px;
+    }
+    .overlay p {
+        font-size: 18px;
+        padding-bottom: 35px;
+    }
+    .overlay a {
+        padding: 8px 20px;
+        font-size: 11px;
+    }
+    .more {
+        text-align: center;
+    }
+    .more a {
+        font-size: 14px;
+    }
+    .map {
+        height: 350px;
+    }
+    .red-line {
+        height: auto;
+        padding: 20px 0;
+    }
+    .text-part h3 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+    .text-part .contact-Btn {
+        padding: 12px 32px;
+    }
+}
+
+/* ========= Extra Small Devices (max-width:480px) ========= */
+@media (max-width:480px){
+    .overlay p {
+        font-size: 16px;
+    }
+    .overlay a {
+        font-size: 10px;
+        padding: 6px 16px;
+    }
+    .text-part h3 {
+        font-size: 20px;
+    }
+    .text-part .contact-Btn {
+        font-size: 14px;
+        padding: 10px 28px;
+    }
+    .map {
+        height: 300px;
+    }
+}
+
+/* ============================================= */
+/* ========== RESPONSIVE DESIGN END ============ */
+/* ============================================= */
